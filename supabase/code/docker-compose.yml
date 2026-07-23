@@ -181,6 +181,12 @@ services:
       GOTRUE_MAILER_URLPATHS_RECOVERY: ${MAILER_URLPATHS_RECOVERY}
       GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE: ${MAILER_URLPATHS_EMAIL_CHANGE}
 
+      # Templates de email com a marca (Designama)
+      GOTRUE_MAILER_SUBJECTS_MAGIC_LINK: "O teu código de acesso Designama"
+      GOTRUE_MAILER_TEMPLATES_MAGIC_LINK: "https://www.designama.cloud/emails/magic-link.html"
+      GOTRUE_MAILER_SUBJECTS_RECOVERY: "Repor a tua palavra-passe Designama"
+      GOTRUE_MAILER_TEMPLATES_RECOVERY: "https://www.designama.cloud/emails/recovery.html"
+
       GOTRUE_EXTERNAL_PHONE_ENABLED: ${ENABLE_PHONE_SIGNUP}
       GOTRUE_SMS_AUTOCONFIRM: ${ENABLE_PHONE_AUTOCONFIRM}
       # Uncomment to enable OAuth / social login providers.
