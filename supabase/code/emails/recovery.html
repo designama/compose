@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
+  <title>Repor a palavra-passe Designama</title>
+</head>
+<!--
+  Template de email do Supabase (GoTrue) - "Reset Password" / Recovery.
+  Variáveis Go: {{ .ConfirmationURL }} = link para /login/redefinir;
+  {{ .SiteURL }} = URL do site. Email: tabelas + estilos inline + cores hex.
+-->
+<body style="margin:0;padding:0;background:#eef3f9;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Repor a palavra-passe da tua conta Designama.</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef3f9;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="480" cellpadding="0" cellspacing="0" style="max-width:480px;width:100%;background:#ffffff;border:1px solid #dde5ee;border-radius:8px;">
+          <tr>
+            <td style="padding:32px 32px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="vertical-align:middle;padding-right:10px;">
+                    <img src="{{ .SiteURL }}/icons/icon-192.png" width="34" height="34" alt="Designama" style="display:block;border-radius:7px;" />
+                  </td>
+                  <td style="vertical-align:middle;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:17px;font-weight:700;color:#141d2c;letter-spacing:-0.2px;">Designama</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 32px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+              <h1 style="margin:0;font-size:20px;font-weight:700;color:#141d2c;">Repor a palavra-passe</h1>
+              <p style="margin:10px 0 0;font-size:14px;line-height:1.6;color:#55647a;">Recebemos um pedido para repor a palavra-passe da tua conta Designama. Clica no botão para definires uma nova.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 32px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center" bgcolor="#30415b" style="border-radius:6px;">
+                    <a href="{{ .ConfirmationURL }}" style="display:inline-block;padding:13px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;color:#f4f9fd;text-decoration:none;border-radius:6px;">Definir nova palavra-passe</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:22px 32px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+              <p style="margin:0;font-size:13px;line-height:1.6;color:#8b9aad;">Este link expira em breve. Se não pediste isto, ignora este email, a tua palavra-passe fica igual.</p>
+              <p style="margin:14px 0 0;font-size:12px;line-height:1.6;color:#8b9aad;">Se o botão não funcionar, copia e cola este endereço no browser:<br /><a href="{{ .ConfirmationURL }}" style="color:#30415b;word-break:break-all;">{{ .ConfirmationURL }}</a></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 32px 28px;">
+              <hr style="border:none;border-top:1px solid #dde5ee;margin:0 0 16px;" />
+              <p style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;color:#8b9aad;">© 2026 Designama · Toda a tua operação imobiliária, num só sistema.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
