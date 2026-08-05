@@ -154,6 +154,13 @@ services:
       GOTRUE_JWT_DEFAULT_GROUP_NAME: authenticated
       GOTRUE_JWT_EXP: ${JWT_EXPIRY}
 
+      # Rotacao de refresh tokens DESLIGADA. A app corre no Vercel (serverless) e
+      # renova o token a partir de varios sitios ao mesmo tempo (browser, middleware,
+      # server components), cada um com o seu cookie. Com rotacao ligada, um refresh
+      # token ja rodado (para alem da janela de tolerancia) era lido como reuse e o
+      # GoTrue revogava a familia inteira -> sessao morta -> logouts aleatorios.
+      GOTRUE_SECURITY_REFRESH_TOKEN_ROTATION_ENABLED: "false"
+
       # Legacy symmetric HS256 key
       GOTRUE_JWT_SECRET: ${JWT_SECRET}
 
